@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "photo header about"
+        "personal-introduction personal-introduction personal-introduction"
+        "education skills skills";
+      grid-gap: 20px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative; /* Needed for absolute positioning of the back button */
+    }
+
+    .photo {
+      grid-area: photo;
+      padding: 20px;
+    }
+
+    .photo img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover; /* Ensures the image fills the square */
+    }
+
+    header {
+      grid-area: header;
+      padding: 20px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 20px; /* Creates space between image and text */
+    }
+
+    .about {
+      grid-area: about;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff; /* Change background to white */
+    }
+
+    .personal-introduction {
+      grid-area: personal-introduction;
+    }
+
+    .education {
+      grid-area: education;
+    }
+
+    .skills {
+      grid-area: skills;
+    }
+
+    section {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 10px;
+      color: #444;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 5px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Styling for the back button */
+    .back-button {
+      position: absolute; /* Position it relative to the container */
+      top: 20px;
+      left: 20px;
+      padding: 5px 10px; /* Make the button smaller */
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px; /* Smaller text */
+    }
+
+    .back-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-container">
+      <div class="photo">
+        <img src="..//Image/WhatsApp 图像2025-02-17于12.53.28_878313ec.jpg" alt="Wang Jun Kai">
+      </div>
+      <header>
+        <h1>Wang Jun Kai</h1>
+        <p>Email: avenwjk@gmail.com | Phone: 83117799</p>
+        <p>Ang Mo Kio 560423</p>
+      </header>
+    </div>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p>BCA Academy Student</p>
+      <p>Digital Engineer</p>
+      <p>Age: 20 Years Old</p>
+      <p>CCA: Basketball</p>
+      <p>NRIC End Date : 07 June 2026</p>
+    </section>
+
+    <section class="personal-introduction">
+      <h2>Personal Introduction</h2>
+      <p>I am a fresh graduate of BCA Academy, majoring in Digital Engineering. <br>
+         I have strong learning ability, work seriously, have a positive work attitude, 
+         and am good at teamwork.<br>
+         I hope to apply the knowledge I have learned in your 
+         company, actively solve problems, and continuously improve my skills.
+      </p>
+    </section>
+
+    <section class="education">
+        <h2>Education</h2>
+        <p>BCA Academy (2022-2025)</p>
+        <h2>LANGUAGES</h2>
+        <p>Chinese</p>
+        <p>English</p>
+      </section>
+      
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Revit</li>
+        <li>Microsoft Project</li>
+        <li>AutoCAD</li>
+        <li>Navisworks</li>
+        <li>Visual Studio Code</li>
+      </ul>
+    </section>
+
+    <!-- Back button placed in the top left corner -->
+    <button class="back-button" onclick="window.history.back()">Back</button>
+  </div>
+</body>
+</html>

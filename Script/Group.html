@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P3-Project</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
+    <style>
+        .item1 { grid-area: header; }
+        .item2 { grid-area: marquee; }
+        .item3 { grid-area: nav; }
+        .item4 { grid-area: main; }
+        .item5 { grid-area: converter; }
+        .item6 { grid-area: location; }
+        .item7 { grid-area: member; }
+        .item8 { grid-area: footer; }
+
+        .grid-container {
+            display: grid;
+            background-color: rgb(244, 247, 247);
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas:
+                "header header header header header"
+                "marquee marquee marquee marquee marquee"
+                "nav main main main location"
+                "converter main main main member"
+                "footer footer footer footer footer";
+            gap: 0px;
+            padding: 10px;
+        }
+
+        .grid-container > div {
+            display: grid;
+            flex-direction: column;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: 2px solid rgb(243, 242, 242);
+            border-radius: 15px;
+            background-color: rgb(217, 224, 230);
+            color: black;
+            margin-bottom: 5px; /* Adds spacing between sections */
+        }
+
+        .item1 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 0 20px;
+}
+
+        .item1 h4 {
+            font-size: 32px;
+            font-family: "Arial Narrow", sans-serif;
+            font-weight: normal;
+            color: red;
+            text-align: center;
+            margin: 0;
+        }
+
+        ..item2 {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            width: 100%;
+            white-space: nowrap;
+            position: relative;
+            border-radius: 10px;
+            padding: 10px 0;
+        }
+
+        .item2 p {
+            display: inline-block;
+            animation: marquee 40s linear infinite, colorGradient 5s linear infinite;
+            white-space: nowrap;
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes colorGradient {
+            0% { color: #4CAF50; }
+            33% { color: #2196F3; }
+            66% { color: #FF5722; }
+            100% { color: #4CAF50; }
+    
+        }
+
+        .item3 { font-family: 'Times New Roman', Times, serif; padding: 20px; }
+        .item4 { background-color: #ff33ff; padding: 20px; }
+        .item5 { font-family: Arial, Helvetica, sans-serif; }
+        .item6 { background-color: #ffdd33; padding: 20px; }
+        .item7 { font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-inline: 0px; }
+        .item8 { background-color: #ffbb33; height: 50px; display: flex; align-items: center; justify-content: center; }
+    
+
+        .grid-container h3, .grid-container h2, .grid-container h5, .grid-container h4, .grid-container p, .grid-container ul {
+            margin: 10px 0;
+            font-weight: normal;
+        }
+
+        .grid-container ul {
+            padding-left: 10px;
+        }
+
+        .item4 h2 {
+    font-size: 28px;
+    font-family: "Arial Black", sans-serif;
+    color:green;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+        .item5 
+        {
+        display: grid;
+            place-items: center;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .input-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .item8 {
+    background: linear-gradient(to right, #FFA500, #FF4500);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.thank-you-footer h5 {
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #FFD700; /* Gold color to highlight name */
+}
+
+.emoji {
+    font-size: 20px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+        .clock {
+    position: absolute;
+    top: 40px;
+    right:40px;
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    padding: 5px 15px; 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+}
+
+
+.clock p {
+    margin: 0;
+    font-size: 18px;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="item1">
+            <header>
+                <h4>BCA Academy</h4>
+                <div id="clock" class="clock"></div>
+            </header>
+        </div>
+        
+        <div class="item2">
+            <p>Vision: To be a leader in education and research, for a future-ready built environment. <br>
+            Mission: To provide quality training, learning and research programmes for a future-ready built environment.</p>
+        </div>
+        <div class="item3">
+            <nav>
+                <h3>Programming3</h3>
+                <ul>
+                    <li><a href="HTML Notes.html">HTML Notes</a></li>
+                    <li><a href="CSS Notes.html">CSS Notes</a></li>
+                    <li><a href="JavaScript Notes.html">JavaScript Notes</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="item4">
+            <main>
+                <h2>Programming-3 Final Group Project</h2>
+                We are truly grateful for the opportunity to learn programming—woohoo! Through this lesson, <br>
+                we have gained valuable knowledge in HTML, CSS, and JavaScript.  <br>
+                Collaborating as a team, we supported and learned from one another, <br>
+                enabling us to create a uniquely special webpage that reflects our collective skills and creativity. </p>
+
+                <video width="700" height="400" controls>
+                    <source src="../Image/WhatsApp 视频2025-02-20于22.48.23_0c0a91a8.mp4" type="video/mp4">
+                  </video>
+                 
+            </main>
+        </div>
+        <div class="item5">
+            <label for="valueA">School Fees (SGD):</label>
+    <input type="number" id="valueA" placeholder="Enter amount"><br>
+
+    <label>Please select your payment currency:</label><br>
+    <div class="radio-group">
+        <label><input type="radio" name="currency" value="MMK"> Myanmar Kyat</label><br>
+        <label><input type="radio" name="currency" value="CNY"> Chinese Yuen</label><br>
+        <label><input type="radio" name="currency" value="MYR"> Malaysian $</label><br>
+        <br>
+    </div>
+
+    <button onclick="calculateMul()">Calculate</button>
+
+    <p> Total = <span id="result">0</span></p>
+
+        </div>
+
+        <div class="item6">
+            <h3>BCA Braddell Campus</h3>
+<a href="https://www.bcaa.edu.sg" target="_blank">
+    <img src="../Image/BCAA Logo.jpg" alt="BCAA" width="150" height="30">
+</a>
+<p>
+                <a href="Map.html">200 Braddell Road <br>Singapore 579700</a>
+
+        </div>
+        
+        <div class="item7">
+            <h3> Our Team Members</h3>
+            <h4>Behind the Screens: <br>
+                Our Digital Footprints</h4>
+            <p>
+                <a href="Wang Jun Kai's CV.html">
+                    <img src="../Image/WhatsApp 图像2025-02-17于12.53.28_878313ec.jpg" alt="Wang Jun Kai" width="50" height="50">
+                    Wang Jun Kai
+                </a> <br>
+                <br>
+            
+                <a href="Chan Myae Wyne's CV.html">
+                    <img src="../Image/screen 1.png" alt="Chan Myae Wyne" width="50" height="50">
+                    Chan Myae Wyne
+                </a> <br>
+            <br>
+
+                <a href="LanSian_CV.html">
+                    <img src="../Image/LanSian.jpeg" alt="Chong Lan Sian" width="50" height="50">
+                    Chong Lan Sian
+                </a>
+            
+        </div>
+        <div class="item8">
+            <footer><h5>Special thanks to Mr. Unni for his invaluable guidance and support in bringing this project to life.</h5></footer>
+        </div>
+        
+    </div>
+
+    <script>
+        
+        // Hardcoded average exchange rates (1 SGD = X currency)
+        const exchangeRates = {
+            "MMK": { rate: 1560.00, symbol: "MMK" },
+            "CNY": { rate: 5.35, symbol: "CNY" },
+            "MYR": { rate: 3.45, symbol: "MYR" }
+        }
+
+        function calculateMul() {
+            let amountSGD = parseFloat(document.getElementById('valueA').value);
+
+            if (isNaN(amountSGD) || amountSGD <= 0) {
+                alert("Please enter a valid amount.");
+                return;
+            }
+
+            let selectedCurrency = document.querySelector('input[name="currency"]:checked');
+
+            if (!selectedCurrency) {
+                alert("Please select a currency.");
+                return;
+            }
+
+            let currency = selectedCurrency.value;
+            let rateInfo = exchangeRates[currency];
+
+            if (rateInfo) {
+                let result = amountSGD * rateInfo.rate;
+                document.getElementById('result').textContent = result.toFixed(2) + " " + rateInfo.symbol;
+            } else {
+                alert("Invalid currency selection.");
+            }
+        }   
+
+        function updateClock() {
+    const clockElement = document.getElementById("clock");
+    const now = new Date();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+    let year = now.getFullYear();
+    let month = now.getMonth() + 1;  // Months are 0-based
+    let day = now.getDate();
+
+    // Format the time to always show two digits
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    // Determine AM or PM
+    let period = "AM";
+    if (hours >= 12) {
+        period = "PM";
+        if (hours > 12) {
+            hours -= 12;  // Convert to 12-hour format
+        }
+    } else if (hours === 0) {
+        hours = 12;  // Midnight case
+    }
+
+    // Format the date to always show two digits and swap to Day-Month-Year
+    month = (month < 10) ? "0" + month : month;
+    day = (day < 10) ? "0" + day : day;
+
+
+    const timeString = `${hours}:${minutes}:${seconds} ${period}`;  // Added AM/PM
+    const dateString = `${day}-${month}-${year}`;  // Changed format to Day-Month-Year
+
+    clockElement.innerHTML = `<p>${timeString}</p><p>${dateString}</p>`;
+}
+
+
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+
+        // Call the updateClock function once when the page loads
+        updateClock();
+
+
+
+    </script>
+</body>
+</html>

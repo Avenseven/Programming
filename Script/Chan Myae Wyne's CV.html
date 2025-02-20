@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chan Myae Wyne's CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "photo header header "
+        "education personal-introduction personal-introduction"
+        "education RELEVANTCOURSEWORK RELEVANTCOURSEWORK";
+      grid-gap: 20px;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative; /* Needed for absolute positioning of the back button */
+    }
+
+    .photo {
+      grid-area: photo;
+      padding: 20px;
+    }
+
+    .photo img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover; /* Ensures the image fills the square */
+    }
+
+    header {
+      grid-area: header;
+      padding: 10px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 20px; /* Creates space between image and text */
+    }
+
+    .personal-introduction {
+      grid-area: personal-introduction;
+    }
+
+    .education {
+      grid-area: education;
+    }
+
+    .RELEVANTCOURSEWORK
+    {
+      grid-area: RELEVANTCOURSEWORK;
+    }
+
+    section {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 10px;
+      color: #444;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Styling for the back button */
+    .back-button {
+      position: absolute; /* Position it relative to the container */
+      top: 20px;
+      left: 20px;
+      padding: 5px 10px; /* Make the button smaller */
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px; /* Smaller text */
+    }
+
+    .back-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-container">
+      <div class="photo">
+        <img src="../Image/screen 1.png" alt="Chan Myae Myne">
+      </div>
+      <header>
+        <h1>CHAN MYAE WYNE</h1>
+        <p>Email: chan_myae_wyne_3944@bcaa.edu.sg</p>
+        <p>Phone: 85464536</p>
+        <p>Myanmar</p>
+        <p>Blk 587, Ang Mo Kio Ave 3, #04-3001,Singapore 560587</p>
+      </header>
+    </div>
+
+    <section class="personal-introduction">
+      <h2>Personal Introduction</h2>
+      <p>As an eager engineering student with a passion
+        for innovation, I am seeking an internship that
+        would allow me to apply my academic
+        knowledge and technical skills in a real-world
+        setting. Excited to contribute to a team, gain
+        industry experience, and further develop my
+        problem-solving and engineering skills to make a
+        meaningful impact.
+      </p>
+    </section>
+
+    <section class="RELEVANTCOURSEWORK">
+        <h2>RELEVANTCOURSEWORK</h2>
+        <ul>
+            <li>BIM for Architecture/Structure/MEP/QS/FM</li>
+            <li>Design Visualization</li>
+            <li>Digital Drawing</li>
+            <li>BIM Construction & Coordination</li>
+            <li>Building Regulation</li>
+            <li>Digital Media Presentation</li>
+            <li>Green Building Technology</li>
+            <li>Technical Communication</li>
+            <li>Programming</li>
+            <li>IoT for Smart Building</li>
+            <li>Project Management</li>
+            <li>Sustainable Building with BIM</li>
+            <li>BIM Design and Coordination</li>
+            <li>BIM Customization</li>
+            <li>Data Analytics and Visualization</li>
+            <li>Interdisciplinary VDC Project</li>
+          </ul>
+      </section>
+
+    <section class="education">
+        <h2>Education</h2>
+           <p>Diploma in Digital Engineering</p>
+           <p>BCA Academy</p>
+           <p>2022-2025</p>
+        <br>
+        <h2>Language</h2>
+           <p>Burmese</p>
+           <p>English</p>
+        <br>
+        <h2>Skills</h2>
+        <br>
+        <h3>BIM & Design Software</h3>
+           <p>Autodesk Revit</p>
+           <p>Navisworks</p>
+           <p>AutoCAD</p>
+           <p>3ds Max</p>
+           <p>SketchUp</p>
+           <p>Archicad</p>
+           
+        <br>
+           <h3>Quantity Takeoff Software</h3>
+           <p>Cubicost TRB/TAS/ TME</p>
+        <br>
+        <h3>Energy Modeling & Visualization</h3>
+           <p>IESVE</p>
+           <p>Enscape</p>
+        <br>
+        <h3>Microsoft Office Suite</h3>
+           <p>Microsoft Word/ PowerPoint/Excel/Project</p>
+      </section>
+      
+    <!-- Back button placed in the top left corner -->
+    <button class="back-button" onclick="window.history.back()">Back</button>
+  </div>
+</body>
+</html>
+
